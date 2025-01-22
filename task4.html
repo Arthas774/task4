@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Флаги</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(221, 239, 255);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: cursive;
+            font-weight: bold;
+        }
+
+        h3 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .flags-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .flag {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+
+        .saint_vincent_and_the_grenadines {
+            background: linear-gradient(to right,
+                    #012176 75px,
+                    #fbd11b 75px,
+                    #fbd11b 225px,
+                    #007d2b 0);
+            display: grid;
+            place-items: center;
+        }
+
+        .saint_vincent_and_the_grenadines__diamond {
+            position: relative;
+            height: 150px;
+            aspect-ratio: 1;
+            background-color: #007c2e;
+            clip-path: polygon(50% 0%, 75% 50%, 50% 100%, 25% 50%);
+        }
+
+        .saint_vincent_and_the_grenadines::before,
+        .saint_vincent_and_the_grenadines::after {
+            content: "";
+            position: absolute;
+            width: 8px;
+            height: 100%;
+            left: 50%;
+            top: -10px;
+            background-color: #fbd11b;
+            z-index: 1;
+            transform: rotate(25deg);
+        }
+
+        .saint_vincent_and_the_grenadines::after {
+            transform: rotate(155deg);
+            left: 47%;
+        }
+
+        .saint_vincent_and_the_grenadines__hidden_diamond {
+            position: absolute;
+            top: 15px;
+            z-index: 1;
+            left: 36%;
+            height: 80px;
+            aspect-ratio: 1;
+            background-color: #fbd11b;
+            clip-path: polygon(50% 0%, 75% 50%, 50% 100%, 25% 50%);
+        }
+
+        .tanzania {
+            background: linear-gradient(-213.5deg,
+                    #17b636 130px,
+                    #ffcd00 130px,
+                    #ffcd00 140px,
+                    #000 140px,
+                    #000 190px,
+                    #ffcd00 190px,
+                    #ffcd00 200px,
+                    #00a5df 0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flags-container">
+        <div class="flag-container">
+            <h3>Сент-Винсент и Гренадины</h3>
+            <div class="flag saint_vincent_and_the_grenadines">
+                <div class="saint_vincent_and_the_grenadines__diamond"></div>
+                <div class="saint_vincent_and_the_grenadines__hidden_diamond"></div>
+            </div>
+        </div>
+        <div class="flag-container">
+            <h3>Танзания</h3>
+            <div class="flag tanzania"></div>
+        </div>
+    </div>
+</body>
+
+</html>
