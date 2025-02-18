@@ -14,13 +14,9 @@
         body {
             width: 100%;
             height: 100vh;
-            background-color: rgb(221, 239, 255);
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
-            font-family: cursive;
-            font-weight: bold;
         }
 
         h3 {
@@ -37,8 +33,7 @@
             position: relative;
             width: 300px;
             height: 200px;
-            box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
-            overflow: hidden;
+
         }
 
         .saint_vincent_and_the_grenadines {
@@ -51,45 +46,39 @@
             place-items: center;
         }
 
-        .saint_vincent_and_the_grenadines__diamond {
-            position: relative;
-            height: 150px;
-            aspect-ratio: 1;
+        .flag_container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .flag_diamond {
+            position: absolute;
+            height: 70px;
+            width: 70px;
             background-color: #007c2e;
             clip-path: polygon(50% 0%, 75% 50%, 50% 100%, 25% 50%);
         }
 
-        .saint_vincent_and_the_grenadines::before,
-        .saint_vincent_and_the_grenadines::after {
-            content: "";
-            position: absolute;
-            width: 8px;
-            height: 100%;
-            left: 50%;
-            top: -10px;
-            background-color: #fbd11b;
-            z-index: 1;
-            transform: rotate(25deg);
+        .flag1_diamond {
+            top: 45px;
+            left: 139px;
         }
 
-        .saint_vincent_and_the_grenadines::after {
-            transform: rotate(155deg);
-            left: 47%;
+
+        .flag2_diamond {
+            top: 46px;
+            right: 137px;
         }
 
-        .saint_vincent_and_the_grenadines__hidden_diamond {
-            position: absolute;
-            top: 15px;
-            z-index: 1;
-            left: 36%;
-            height: 80px;
-            aspect-ratio: 1;
-            background-color: #fbd11b;
-            clip-path: polygon(50% 0%, 75% 50%, 50% 100%, 25% 50%);
+        .flag3_diamond {
+            top: 84px;
+            left: 116px;
         }
+
+
 
         .tanzania {
-            background: linear-gradient(-213.5deg,
+            background: linear-gradient(146.5deg,
                     #17b636 130px,
                     #ffcd00 130px,
                     #ffcd00 140px,
@@ -107,8 +96,10 @@
         <div class="flag-container">
             <h3>Сент-Винсент и Гренадины</h3>
             <div class="flag saint_vincent_and_the_grenadines">
-                <div class="saint_vincent_and_the_grenadines__diamond"></div>
-                <div class="saint_vincent_and_the_grenadines__hidden_diamond"></div>
+                <div class="flag_diamond flag1_diamond"></div>
+                <div class="flag_diamond flag2_diamond"></div>
+                <div class="flag_diamond flag3_diamond"></div>
+
             </div>
         </div>
         <div class="flag-container">
